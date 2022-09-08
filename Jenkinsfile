@@ -6,7 +6,7 @@ pipeline{
 }
 }
       stages{
-          stage(install httpd){
+          stage('install httpd'){
               steps{
                   sh "yum install httpd -y"
                   sh "cp -r index.html /var/www/html/"
