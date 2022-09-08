@@ -6,12 +6,9 @@ pipeline{
 }
 }
       stages{
-          stage('install httpd'){
+          stage('send this file to slave-1'){
               steps{
-                  sh "yum install httpd -y"
-                  sh "cp -r index.html /var/www/html/"
-                  sh "chmod -R 777 /var/www/html/index.html"
-                  sh "service httpd start"
+                  sh "scp -r index.html ec2-user@172.31.38.178:/mnt/slave-1"
 }
 }
 }
