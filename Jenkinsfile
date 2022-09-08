@@ -10,7 +10,7 @@ pipeline{
               steps{
                   sh "chmod -R 777 index.html"
                   sh "chmod -R 777 23mayohio.pem"   
-                  sh "scp -r -i '23mayohio.pem' /mnt/projects/index.html ec2-user@172.31.38.178:/slave-1"
+                  sh "scp -r -i '23mayohio.pem' /mnt/projects/index.html ec2-user@172.31.38.178:/home/ec2-user/slave-1"
 }
 }
 }
